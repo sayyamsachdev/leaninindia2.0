@@ -1,0 +1,59 @@
+/*==============================
+=            Colors            =
+==============================*/
+
+$transparent: rgba(0,0,0,0);
+$blue: #008CDD;
+$red: #D63232;
+$yellow: #FFD656;
+$green: #7ED321;
+$white: #FFFFFF;
+$neutral: #434A54;
+
+$light-gray: #F8F8F8;
+$gray: #424242;
+$medium-gray: $gray;
+$dark-gray: #2e2e2e;
+$black: #1e1e1e;
+$orange: #F57802;
+
+$primary: $red;
+
+$transparent-color: $transparent;
+$primary-color: $primary;
+$primary-color-light: scale-color($primary, $lightness: 20%);
+$primary-color-medium: scale-color($primary, $lightness: -40%);
+$primary-color-dark: scale-color($primary, $lightness: -75%);
+
+// $gray: scale-color($neutral, $lightness: 85%);
+// $medium-gray: #CCD1D9;
+// $dark-gray: #656D78;
+// $black: scale-color($neutral, $lightness: -30%);
+
+$anchor-color: #0070D2;
+
+$border-color: #e8e8e8;
+
+/*=====  End of Colors  ======*/
+
+
+/*===================================
+=            Typograpghy            =
+===================================*/
+
+$primary-font: "Helvetica Neue";
+$font-extralight: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 600;
+$font-bold: 700;
+$font-black: 900;
+
+$text-color-light: #8C8C8C;
+$text-color-dark: $neutral;
+
+/*=====  End of Typograpghy  ======*/
+
+
+$global-radius: 2px;
+$global-width: rem-calc(1440);

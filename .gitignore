@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+
+#python dependencies and extra files
+lib
+*.pyc
+
+#other dependencies
+node_modules
+bower_components
+
+#virtual environment
+venv-lii-flask

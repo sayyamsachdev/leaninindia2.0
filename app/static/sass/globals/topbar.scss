@@ -1,0 +1,49 @@
+/*===============================
+=            Top Bar            =
+===============================*/
+
+#top-bar{
+	line-height: 4;
+	vertical-align: middle;
+	border-bottom: 1px solid $border-color;
+	overflow: visible;
+	ul, li{
+		display: inline-block;
+	}
+	li:not(.title-area){
+		padding:0;
+		&:not(:last-child){padding-right: 24px;}
+		a{
+			color: $primary;
+			padding: 0;
+			position: relative;
+			&:after{
+				@include transition(visibility, $timing: 150ms, $easing: ease-in);
+				content: "\2022";
+				position: absolute;
+				top: calc(100% - 4px);
+				left: calc(50% - 4px);
+				font-size: 28px;
+				visibility: hidden;
+			}
+			&:not(.has-dropdown):hover, &:not(.has-dropdown).active, &.active{
+				&:after{
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.title-area{
+		float: left;
+		padding-left: 12px;
+		padding-right: 12px;
+		margin-right: 48px;
+		margin-bottom: 8px;
+	}
+}
+
+.top-bar-right{
+	@media screen and (min-width: 40em){
+		line-height: 6rem;
+	}
+}

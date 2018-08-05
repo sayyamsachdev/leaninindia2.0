@@ -1,0 +1,29 @@
+{
+  "name": "flask-boilerplate",
+  "version": "1.0.0",
+  "authors": [
+    "Sayyam Sachdev <sayyam.sachdev@innovaccer.com>"
+  ],
+  "description": "Flask boilerplate",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "foundation-sites": "~6.0.0",
+    "ngSticky":""
+  },
+  "devDependencies": {
+  },
+  "resolutions": {
+    "angular": "1.4.9"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

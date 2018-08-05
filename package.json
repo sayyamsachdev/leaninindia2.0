@@ -1,0 +1,26 @@
+{
+  "name": "flask-boilerplate",
+  "version": "1.0.0",
+  "description": "Flask boilerplate",
+  "main": "gulpfile.js",
+  "config": {
+    "audit": false
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "setup": "./setup.sh",
+    "check": "gulp",
+    "build": "gulp sass",
+    "start": "gulp watch"
+  },
+  "authors": [
+    "Sayyam Sachdev <sayyam.sachdev@innovaccer.com>"
+  ],
+  "license": "MIT",
+  "private": true
+}
