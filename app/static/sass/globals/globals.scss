@@ -2,9 +2,6 @@
 =            Heading Sizes            =
 =====================================*/
 
-$heading-lg: rem-calc(36);
-$heading-md: rem-calc(28);
-$heading-sm: rem-calc(20);
 $text-reg: rem-calc(14);
 $text-lg: rem-calc(24);
 $text-md: rem-calc(18);
@@ -119,6 +116,14 @@ $text-sm: rem-calc(12);
 	padding: 0;
 }
 
+.no-margin{
+	margin: 0;
+}
+
+.inline-block{
+	display: inline-block
+}
+
 /*=====  End of Helper Classes  ======*/
 
 /*============================
@@ -131,6 +136,18 @@ body{
 
 /*=====  End of Body  ======*/
 
+.hero{
+	background-size: cover;
+	&.hero-full{
+		height: calc(100vh - 134px);
+	}
+	*{
+		color: $white;
+	}
+	@media screen and (min-width: 40em){
+		padding: 2rem 6rem;
+	}
+}
 
 
 .page-header{
@@ -267,7 +284,7 @@ body{
 .wrapper.row {
 	// max-width: 1440px !important;
 	// @include gutter;
-	> .columns {
+	> .columns, > .column {
 		&:first-child {
 			padding-left: 0;
 		}
@@ -275,7 +292,7 @@ body{
 			padding-right: 0;
 		}
 	}
-	>.columns.large-12{
+	>.columns.large-12, >.column.large-12{
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -283,14 +300,25 @@ body{
 
 /*=====  End of Spacing Related Styles  ======*/
 
-/*=======================================
-=            Section Heading            =
-=======================================*/
+/*======================================
+=            Section CSS               =
+======================================*/
+
+.section{
+	padding-top: 72px;
+	padding-bottom: 120px;
+}
+
+.section-subheading{
+	margin-bottom: 48px;
+	max-width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .section-heading{
 	h1, h2, h3, h4, h5, h6{
 		color: $black;
-		font-size: $heading-sm;
 		font-weight: $font-semibold;
 		small{
 			font-weight: $font-normal;
@@ -304,7 +332,7 @@ body{
 	}
 }
 
-/*=====  End of Section Heading  ======*/
+/*=====  End of Section CSS  ======*/
 
 
 /*===============================
@@ -314,6 +342,7 @@ body{
 .button {
 	// padding: rem-calc(9) rem-calc(15);
 	// font-size: rem-calc(12);
+	line-height: 1.15 !important;
 	border-width: $button-border-width;
 	border-color: $medium-gray;
 	position: relative;
@@ -333,6 +362,7 @@ body{
 	&.primary {
 		$border-color: scale-color($primary-color, $lightness: $button-function-factor /* _settings */);
 		border-color: $border-color;
+		font-weight: $font-semibold;
 
 		&:hover{
 			border-color: scale-color($border-color, $lightness: $button-function-factor /* _settings */);
@@ -362,65 +392,96 @@ body{
 			border-color: scale-color($border-color, $lightness: $button-function-factor /* _settings */);
 		}
 	}
-	&.inverse {
-		background: $neutral;
+	&.transparent {
+		background: transparent;
+		border-color: transparent;
 		color: $white;
-		$border-color: $white;
-		border-color: $border-color;
+		&:hover, &:focus{
+			background: $primary-color;
+		}
 
-		&:hover{
-			background: scale-color($neutral, $lightness: -15%);
-			border-color: scale-color($border-color, $lightness: $button-function-factor /* _settings */);
+		&.primary{
+			color: $primary-color;
+			&:hover, &:focus{
+				background: $primary-color;
+				color: $white;
+			}
+		}
+		&.secondary{
+			color: $secondary-color;
+			&:hover, &:focus{
+				background: $secondary-color;
+				color: $white;
+			}
+		}
+		&.alert{
+			color: $alert-color;
+			&:hover, &:focus{
+				background: $alert-color;
+				color: $white;
+			}
+		}
+		&.success{
+			color: $success-color;
+			&:hover, &:focus{
+				background: $success-color;
+				color: $white;
+			}
+		}
+		&.link{
+			padding: 8px 16px;
+			color: inherit;
+			&:hover, &:focus{
+				background: transparent;
+				color: inherit;
+			}
 		}
 	}
 	&.default,
 	&.switch {
 		color: $neutral;
 		background: $white;
-
-
 	}
 	&.link {
-		color: $primary-color;
+		color: $blue;
 		background: transparent;
-		&,
+		padding-left: 0;
+		padding-right: 0;
+		
 		&:hover, &:focus{
+			color: scale-color($blue, $lightness: -15%);
+			background: transparent;
 			border-color: transparent;
-		}
-		&:hover, &:focus{
-			color: scale-color($primary-color, $lightness: $button-function-factor /* _settings */);
 		}
 	}
 	&.link-left {
-		padding-left: 25px;
+		padding-left: 16px;
 		&::before {
 			content: '';
 			position: absolute;
 			top: 42%;
-			margin-left: 18px;
+			margin-left: 6px;
 			left: 0;
 			width: 0;
 			height: 0;
 			border-top: 4px solid transparent;
 			border-bottom: 4px solid transparent;
 			border-right: 4px solid;
-			border-right-color: $primary;
 		}
 	}
 	&.link-right {
-		padding-right: 25px;
+		padding-right: 16px;
 		&::after {
 			content: '';
 			position: absolute;
-			top: 42%;
+			top: 40%;
 			right: 0;
-			margin-right: 18px;
+			margin-right: 6px;
 			width: 0;
 			height: 0;
 			border-top: 4px solid transparent;
 			border-bottom: 4px solid transparent;
 			border-left: 4px solid;
-			border-left-color: $primary;
 		}
 	}
 	&.button-dropdown{
@@ -440,8 +501,8 @@ body{
 		}
 	}
 	.icon {
-		font-size: rem-calc(14);
-		vertical-align: -3px;
+		font-size: rem-calc(16);
+		// vertical-align: -3px;
 		// margin: 0 5px;
 	}
 	&.icon-left{
@@ -467,7 +528,6 @@ body{
 
 .button-group{
 	.button{
-		border-radius: 0;
 		&.dropdown-btn{
 			padding: 7px;
 		}
@@ -477,11 +537,8 @@ body{
 		&.active + .button{
 			border-left: 0;
 		}
-		&:first-child{
-			border-radius: $global-radius 0 0 $global-radius !important;
-		}
-		&:last-child{
-			border-radius: 0px $global-radius $global-radius 0px !important;
+		&:not(:last-child){
+			margin-right: 8px;
 		}
 	}
 }
@@ -785,57 +842,13 @@ select {
 /*===========================================
 =            Reusable Components            =
 ===========================================*/
-// .card {
-//     position: relative;
-//     background: $white;
-//     border: 1px solid $border-color;;
-//     padding: 10px 20px;
-//     padding-bottom: 20px;
-//     margin-bottom: 10px;
-//     .card-heading {
-//         font-size: rem-calc(18);
-//         h6 {
-//             margin-bottom: 0;
-//         }
-//     }
-//     .edit-card {
-//         position: absolute;
-//         top: 10px;
-//         right: 10px;
-//         color: $dark-gray;
-//         .material-icons {
-//             font-size: 16px;
-//         }
-//     }
-//     .figure {
-//         font-size: rem-calc(28);
-//     }
-//     .card-graph {
-//         max-height: 100px;
-//         .axis path,
-//         .axis line {
-//             display: none;
-//             fill: none;
-//             stroke: $dark-gray;
-//             shape-rendering: crispEdges;
-//         }
-//         .x.axis text {
-//             font-size: 8px;
-//             fill: $dark-gray;
-//             font-family: $primary-font;
-//             text-transform: uppercase;
-//             text-align: center;
-//         }
-//         .y.axis {
-//             display: none;
-//         }
-//         .y.axis line {
-//             display: none;
-//             stroke: #777;
-//             stroke-dasharray: 2, 2;
-//         }
-//     }
-// }
+.card {
+    position: relative;
+    background: $white;
+    box-shadow: 0 4px 16px 0px rgba(0, 0, 0, 0.12);
+	margin-bottom: 10px;
+	border-radius: $global-radius;
+}
 
 .key-val{
 	.key{
@@ -914,3 +927,19 @@ select {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(0,0,0,0.1);
 }
+
+/*=====  End of Scrollbar  ======*/
+
+/*===========================================
+=            Background Gradient            =
+===========================================*/
+
+.gradient-topdown{
+	background: linear-gradient($gray 72%, $white);
+}
+
+.gradient-downup{
+	background: linear-gradient($white, $gray 72%);
+}
+
+/*=====  End of Background Gradient  ======*/

@@ -95,7 +95,7 @@
 // Button
 // ------
 
-$button-padding: 8px 15px;
+$button-padding: 8px 16px;
 $button-margin: 0;
 // $button-fill: solid;
 $button-background: $red;
@@ -420,7 +420,7 @@ $topbar-link-color: $primary;;
 // $header-font-weight: $global-weight-normal;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
-// $header-sizes: (
+$header-sizes: (
 //   small: (
 //     'h1': 24,
 //     'h2': 20,
@@ -429,15 +429,15 @@ $topbar-link-color: $primary;;
 //     'h5': 17,
 //     'h6': 16,
 //   ),
-//   medium: (
-//     'h1': 48,
-//     'h2': 40,
-//     'h3': 31,
-//     'h4': 25,
-//     'h5': 20,
-//     'h6': 16,
-//   ),
-// );
+  medium: (
+    'h1': 40,
+    'h2': 32,
+    'h3': 28,
+    'h4': 24,
+    'h5': 20,
+    'h6': 16,
+  ),
+);
 // $header-color: inherit;
 // $header-lineheight: 1.4;
 // $header-margin-bottom: 0.5rem;

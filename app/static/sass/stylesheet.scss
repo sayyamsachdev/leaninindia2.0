@@ -11,5 +11,9 @@
 @import 'globals/globals';
 @import 'globals/topbar';
 
+@import 'pages/partials/sponsors';
+@import 'pages/partials/footer';
+@import 'pages/homepage';
+
 @include foundation-everything;
 

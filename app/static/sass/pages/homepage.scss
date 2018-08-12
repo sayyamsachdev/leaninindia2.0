@@ -1,0 +1,86 @@
+.home-title{	
+    font-weight: 400;
+    font-size: 40px;
+    max-width: 378px;
+    @media screen and (min-width: 40em){
+        margin-top: 140px;
+        margin-bottom: 56px;
+	}
+}
+.hero{
+    background-position: right;
+}
+
+.box{
+    .box-title{
+        font-weight: 500;
+    }
+    .box-content{
+        line-height: 1.35;
+    }
+}
+
+.about-grid{
+    margin-top: 24px;
+    margin-right: 56px;
+}
+
+.about-icons{
+    float: left;
+    max-width: 80px;
+    margin-bottom: 40px;
+    margin-right: 16px;
+}
+
+.stats{
+    background-color: $black;
+    color: $white;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    .metric{
+        p{
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.event-card{
+    margin-top: 72px;
+    padding: 8px 24px;
+    .box{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $border-color;
+        .box-content{
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.event-date{
+    width: 64px;
+    height: 64px;
+    margin-bottom: 40px;
+    margin-right: 16px;
+    padding: 10px;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    position: relative;
+    .date{
+        font-size: $text-lg;
+        font-weight: $font-normal;
+        line-height: 1.1;
+        color: $primary;
+    }
+    .month{
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+    }
+    .empty{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
