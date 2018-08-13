@@ -454,10 +454,10 @@ body.is-reveal-open {
   display: none; }
 
 .no-padding {
-  padding: 0; }
+  padding: 0 !important; }
 
 .no-margin {
-  margin: 0; }
+  margin: 0 !important; }
 
 .inline-block {
   display: inline-block; }
@@ -690,7 +690,7 @@ body {
     padding-left: 0;
     padding-right: 0; }
     .button.link:hover, .button.link:focus {
-      color: #0077bc;
+      color: #008CDD;
       background: transparent;
       border-color: transparent; }
   .button.link-left {
@@ -762,6 +762,14 @@ body {
   border-left: 0; }
 
 .button-group .button:not(:last-child) {
+  margin-right: 8px; }
+
+.button-group .button:not(.link) + .button.link:not(:first-child), .button-group .button.link + .button.link:not(:first-child), .button-group .button.link:not(.transparent) + .button.link:not(:first-child) {
+  margin-left: 8px; }
+  .button-group .button:not(.link) + .button.link:not(:first-child).transparent, .button-group .button.link + .button.link:not(:first-child).transparent, .button-group .button.link:not(.transparent) + .button.link:not(:first-child).transparent {
+    margin-left: 0; }
+
+.button-group .button:not(.link) + .button.link:not(:last-child), .button-group .button.link + .button.link:not(:last-child), .button-group .button.link:not(.transparent) + .button.link:not(:last-child) {
   margin-right: 8px; }
 
 /*=====  End of Buttons  ======*/
@@ -1046,6 +1054,44 @@ select {
           color: #D63232;
           border-bottom: 1px solid #D63232; }
 
+.events-list {
+  padding: 8px 24px; }
+  .events-list .box {
+    padding-top: 16px; }
+    .events-list .box .box-body {
+      max-width: 88%;
+      padding-bottom: 16px;
+      vertical-align: top;
+      border-bottom: 1px solid #e8e8e8; }
+    .events-list .box .box-action {
+      color: #008CDD; }
+
+.event-date {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+  padding: 10px;
+  border: 1px solid #D63232;
+  border-radius: 50%;
+  position: relative; }
+  .event-date .date {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #D63232; }
+  .event-date .month {
+    font-size: 0.75rem;
+    font-weight: 500; }
+  .event-date .empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .event-date.old {
+    border: 1px solid #1e1e1e; }
+    .event-date.old .date {
+      color: #1e1e1e; }
+
 /*=====  End of Reusable Components  ======*/
 /*=================================
 =            ScrollBar            =
@@ -1092,15 +1138,15 @@ select {
   overflow: visible; }
   #top-bar ul, #top-bar li {
     display: inline-block; }
-  #top-bar li:not(.title-area) {
+  #top-bar ul:not(.title-area) > li {
     padding: 0; }
-    #top-bar li:not(.title-area):not(:last-child) {
+    #top-bar ul:not(.title-area) > li:not(:last-child) {
       padding-right: 24px; }
-    #top-bar li:not(.title-area) a {
+    #top-bar ul:not(.title-area) > li a {
       color: #D63232;
       padding: 0;
       position: relative; }
-      #top-bar li:not(.title-area) a:after {
+      #top-bar ul:not(.title-area) > li a:after {
         -webkit-transition: visibility 150ms ease-in;
         -moz-transition: visibility 150ms ease-in;
         -ms-transition: visibility 150ms ease-in;
@@ -1112,7 +1158,7 @@ select {
         left: calc(50% - 4px);
         font-size: 28px;
         visibility: hidden; }
-      #top-bar li:not(.title-area) a:not(.has-dropdown):hover:after, #top-bar li:not(.title-area) a:not(.has-dropdown).active:after, #top-bar li:not(.title-area) a.active:after {
+      #top-bar ul:not(.title-area) > li a:not(.has-dropdown):hover:after, #top-bar ul:not(.title-area) > li a:not(.has-dropdown).active:after, #top-bar ul:not(.title-area) > li a.active:after {
         visibility: visible; }
   #top-bar .title-area {
     float: left;
@@ -1223,38 +1269,19 @@ footer {
     line-height: 1.2;
     margin-bottom: 4px; }
 
-.event-card {
-  margin-top: 72px;
-  padding: 8px 24px; }
-  .event-card .box {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #e8e8e8; }
-    .event-card .box .box-content {
-      margin-bottom: 4px; }
+.card#events-list {
+  margin-top: 72px; }
+  .card#events-list .events-list .box-content {
+    margin-bottom: 4px; }
 
-.event-date {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 40px;
-  margin-right: 16px;
-  padding: 10px;
-  border: 1px solid #D63232;
-  border-radius: 50%;
-  position: relative; }
-  .event-date .date {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.1;
-    color: #D63232; }
-  .event-date .month {
-    font-size: 0.75rem;
-    font-weight: 500; }
-  .event-date .empty {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+.events-title {
+  margin-top: 104px;
+  margin-bottom: 144px; }
+
+#events.events-list .box {
+  padding-top: 32px; }
+  #events.events-list .box .box-body {
+    padding-bottom: 32px; }
 
 html,
 body {

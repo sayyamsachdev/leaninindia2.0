@@ -9,11 +9,13 @@
 
 @import 'globals/mixins';
 @import 'globals/globals';
-@import 'globals/topbar';
 
+@import 'pages/partials/topbar';
 @import 'pages/partials/sponsors';
 @import 'pages/partials/footer';
+
 @import 'pages/homepage';
+@import 'pages/events';
 
 @include foundation-everything;
 

@@ -14,7 +14,7 @@
 	<link rel="icon" href="/static/img/favicon/favicon128.png" sizes="128x128"> -->
 	<!-- <link rel="icon" href="/static/images/favicon/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/static/images/favicon/favicon.ico" type="image/x-icon" /> -->
-	<!-- End favicond -->
+	<!-- End favicons -->
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css')}}">
@@ -112,31 +112,37 @@
 			</div>
 			<div class="row">
 				<div class="small-11 small-centered column">
-					<div class="card event-card">
-						<div class="row">
-							<div class="small-12 column">
-								<div class="box">
-									<div class="float-left text-center event-date">
-										<div class="date">22</div>
-										<div class="month">JUL</div>
+					<div class="card" id="events-list">
+						<ul class="events-list no-margin no-bullet">
+							<li class="row">
+								<div class="small-12 column">
+									<div class="box">
+										<div class="inline-block text-center event-date">
+											<div class="date">22</div>
+											<div class="month">JUL</div>
+										</div>
+										<div class="inline-block box-body">
+											<h4 class="box-title">Lean In India Summit ‘18</h4>
+											<p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>
+											<a class="button link link-right">Know More</a>
+										</div>
 									</div>
-									<h4 class="box-title">Lean In India Summit ‘18</h4>
-									<p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>
-									<a class="button link inverse link-right">Know More</a>
 								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="small-12 column">
-								<div class="box">
-									<div class="float-left event-date">
-										<div class="empty">TBD</div>
+							</li>
+							<li class="row">
+								<div class="small-12 column">
+									<div class="box">
+										<div class="inline-block text-center event-date">
+											<div class="empty">TBD</div>
+										</div>
+										<div class="inline-block box-body">
+											<h4 class="box-title">Chicago Booth – Leadership Round Table</h4>
+											<p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>
+										</div>
 									</div>
-									<h4 class="box-title">Chicago Booth – Leadership Round Table</h4>
-									<p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>
 								</div>
-							</div>
-						</div>
+							</li>
+						</ul>
 						<div class="row">
 							<div class="small-12 column text-center">
 								<a class="button link" style="margin: 4px 0;">View All Events</a>

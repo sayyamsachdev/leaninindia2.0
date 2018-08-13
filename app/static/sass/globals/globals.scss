@@ -113,15 +113,15 @@ $text-sm: rem-calc(12);
 }
 
 .no-padding{
-	padding: 0;
+	padding: 0 !important;
 }
 
 .no-margin{
-	margin: 0;
+	margin: 0 !important;
 }
 
 .inline-block{
-	display: inline-block
+	display: inline-block;
 }
 
 /*=====  End of Helper Classes  ======*/
@@ -449,7 +449,8 @@ body{
 		padding-right: 0;
 		
 		&:hover, &:focus{
-			color: scale-color($blue, $lightness: -15%);
+			color: $blue;
+			// color: scale-color($blue, $lightness: -15%);
 			background: transparent;
 			border-color: transparent;
 		}
@@ -539,6 +540,17 @@ body{
 		}
 		&:not(:last-child){
 			margin-right: 8px;
+		}
+		&:not(.link) + .button.link, &.link + .button.link, &.link:not(.transparent) + .button.link{
+			&:not(:first-child){
+				margin-left: 8px;
+				&.transparent{
+					margin-left: 0;
+				}
+			}
+			&:not(:last-child),{
+				margin-right: 8px;
+			}
 		}
 	}
 }
@@ -891,6 +903,58 @@ select {
 					border-bottom: 1px solid $primary;
 				}
 			}
+		}
+	}
+}
+
+.events-list{
+    padding: 8px 24px;
+    .box{
+        padding-top: 16px;
+        .box-body{
+			max-width: 88%;
+			padding-bottom: 16px;
+			vertical-align: top;
+			border-bottom: 1px solid $border-color;
+		}
+		.box-action{
+			color: $blue;
+			// a:not(:last-child){
+			// 	margin-right: 12px;
+			// }
+		}
+    }
+}
+
+.event-date{
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    padding: 10px;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    position: relative;
+    .date{
+        font-size: $text-lg;
+        font-weight: $font-normal;
+        line-height: 1.1;
+        color: $primary;
+    }
+    .month{
+        font-size: $text-sm;
+        font-weight: $font-semibold;
+    }
+    .empty{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+	}
+	
+	&.old{
+		border: 1px solid $black;
+		.date{
+			color: $black;
 		}
 	}
 }

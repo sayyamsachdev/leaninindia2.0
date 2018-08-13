@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lean In - India Chapter</title>
+	<!-- favicons -->
+	<!-- <link rel="icon" href="/static/images/favicon/favicon.png" sizes="16x16">
+	<link rel="icon" href="/static/img/favicon/favicon32.png" sizes="32x32">
+	<link rel="icon" href="/static/img/favicon/favicon48.png" sizes="48x48">
+	<link rel="icon" href="/static/img/favicon/favicon64.png" sizes="64x64">
+	<link rel="icon" href="/static/img/favicon/favicon128.png" sizes="128x128"> -->
+	<!-- <link rel="icon" href="/static/images/favicon/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/static/images/favicon/favicon.ico" type="image/x-icon" /> -->
+	<!-- End favicons -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css')}}">
+</head>
+
+<body>
+	{% include "partials/topbar.html"  %}
+	<section class="hero" style="background-color:#1e1e1e; background-image: url({{ url_for('static', filename='images/hero-events.png')}})">
+		<div class="row">
+			<div class="column large-4 small-centered text-center">
+				<h1 class="events-title">Events</h1>
+			</div>
+		</div>
+	</section>
+	<section class="section row">
+        <div class="small-11 medium-10 large-8 small-centered column">
+            <div class="row">
+                <div class="small-11 small-centered column">
+                    <ul class="events-list no-margin no-bullet" id="events">
+                        <li class="row">
+                            <div class="small-12 column">
+                                <div class="box">
+                                    <div class="inline-block text-center event-date">
+                                        <div class="date">22</div>
+                                        <div class="month">JUL</div>
+                                    </div>
+                                    <div class="inline-block box-body">
+                                        <h4 class="box-title">Lean In India Summit ‘18</h4>
+                                        <p class="no-margin">Sunday • July 22, 2018</p>
+                                        <p class="no-margin">10:00 AM – 05:00 PM</p>
+                                        <p>Location (TBD)</p>
+                                        <p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>    
+                                        <div class="box-action button-group no-margin">
+                                            <a class="button">Register Now</a>
+                                            <a class="button link">Share</a>
+                                            <a class="button link link-right">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="small-12 column">
+                                <div class="box">
+                                    <div class="inline-block text-center event-date">
+                                        <div class="empty">TBD</div>
+                                    </div>
+                                    <div class="inline-block box-body">
+                                        <h4 class="box-title">Chicago Booth – Leadership Round Table</h4>
+                                        <p class="box-content">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.</p>
+                                        <div class="box-action button-group no-margin">
+                                            <a class="button link">Share</a>
+                                            <a class="button link link-right">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	{% include "partials/footer.html"  %}
+	
+	<script src="{{ url_for('bower.static', filename='jquery/dist/jquery.min.js') }}"></script>
+	<script src="{{ url_for('bower.static', filename='foundation-sites/dist/foundation.js') }}"></script>
+	<!-- <script src="{{ url_for('bower.static', filename='angular/angular.min.js') }}"></script> -->
+	<script src="{{ url_for('bower.static', filename='lodash/lodash.min.js') }}"></script>
+	<!-- <script src="{{ url_for('bower.static', filename='ngSticky/dist/sticky.min.js') }}"></script> -->
+	<script src="/static/js/app.js"></script>
+</body>
+
+</html>

@@ -19,7 +19,7 @@ def render_circles():
 
 @app.route("/events", methods = ["GET"])
 def render_events():
-	return render_template("index.html")
+	return render_template("events.html")
 
 @app.route("/awarenees", methods = ["GET"])
 def render_awareness():

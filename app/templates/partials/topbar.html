@@ -3,7 +3,7 @@
     <nav class="top-bar clearfix" id="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li>
-                <a ui-sref="activity">
+                <a href="/">
                     <img class="brand-image" src="/static/images/lii-logo.png" alt="Lean In India" width="60">
                 </a>
             </li>
@@ -12,14 +12,10 @@
             <ul class="menu">
             </ul>
             <ul class="menu top-bar-right" hide-if-auth>
-                <li><a href="/about">Our Team</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/campaigns">Campaigns</a></li>
+                <li><a href="/about" {% if request.path == "/about" %} class="active" {% endif %}>Our Team</a></li>
+                <li><a href="/events" {% if request.path == "/events" %} class="active" {% endif %}>Events</a></li>
+                <li><a href="/campaigns" {% if request.path == "/campaigns" %} class="active" {% endif %}>Campaigns</a></li>
             </ul>
-            <!-- <div show-if-auth>
-                <toggle-dropdown template-url="commons/user-group-dropdown.html"></toggle-dropdown>
-                <toggle-dropdown template-url="commons/user-group-dropdown.html"></toggle-dropdown>
-            </div> -->
         </section>
     </nav>
 </header>

@@ -10,7 +10,7 @@
 	ul, li{
 		display: inline-block;
 	}
-	li:not(.title-area){
+	ul:not(.title-area) > li{
 		padding:0;
 		&:not(:last-child){padding-right: 24px;}
 		a{
